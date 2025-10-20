@@ -1,0 +1,15 @@
+body {background: rgb(236, 199, 246); padding: 50px;} 
+#pfp {width: 300px;}  
+#pfp {border: 8px dotted green;}
+#pfp {border-radius: 200cqmin;}
+
+h1 {color: rgb(11, 45, 11);font-family: sans-serif;}
+
+h2 {color:rgb(65, 12, 12);font-family: sans-serif;}
+
+p {color:rgb(42, 12, 69);font-size: 20px;font-family:sans-serif;}
+#introduction h1 {font-style: italic;}
+#introduction p {font-size: 130%;}
+.navigation {
+display: flex; row-gap: 20px;
+}
