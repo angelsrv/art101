@@ -2,6 +2,17 @@ var count = 0;
 let colorCount= 0;
 var colors= ["Orchid", "Coral", "HotPink", "Plum"];
 
+$("#reset-button").click(function () {
+    count = 0;
+    $("#needy-button").html("click me");
+    $("body").css("background-color", "white")
+
+    $("img").remove();
+    $("body")("<img width=50 src='images/orchid.webp'>");
+});
+
+
+
 
 $("#needy-button").click( function() {
 

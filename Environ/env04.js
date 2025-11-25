@@ -64,6 +64,29 @@ $(document).ready(function() {
   // Set page title
   $("#title").text(envTitle);
 
+    // New: Function to change character mood based on Stand ability strength
+  function changeMood(characterName, abilityPowerLevel) {
+
+    let message = "";
+
+    if (abilityPowerLevel > 80) {
+      message = `${characterName} is feeling **POWERFUL** and ready to fight!`;
+    } else if (abilityPowerLevel > 40) {
+      message = `${characterName} is feeling **confident** but cautious.`;
+    } else {
+      message = `${characterName} is feeling **worried**... The enemy may be too strong.`;
+    }
+
+    $("#status").text(message);
+  }
+
+  // Trigger the function using a button click
+  $("#changeMoodBtn").click(function() {
+    // Example: Jotaro’s power level changed by story conditions
+    changeMood("Jotaro Kujo", 95);
+  });
+
+
   // Print location info
   $("#location").append(`<h3>Location: ${sceneLocation}</h3>`);
 

@@ -1,0 +1,45 @@
+#creature-form {
+    background: #eeeeee;
+    padding: 20px;
+    margin: 50px;
+}
+
+#creature-list {
+    background: rgb(227, 245, 237);
+    margin: 50px;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border: 3px solid #555;
+}
+
+#creature-form DIV {
+    margin-bottom: 10px;
+}
+
+.creature {
+    position: absolute;
+    transition: transform 0.2s;
+}
+
+.creature-body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.eye {
+    height: 18px;
+    width: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.creature-info {
+    margin-top: 4px;
+    font-size: 20px;
+}
