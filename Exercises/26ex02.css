@@ -1,0 +1,13 @@
+p {color: red;}
+p {background: orange;}
+p {height: 7vh}
+p {padding-top: 30}
+p {padding-left: 20}
+p {width: 50vh} 
+li {color: green;} 
+
+#kittycat {border: 8px dashed black}
+#kittycat {height: 60vh}
+#kittycat {border-radius: 100vh;}
+#kittycat {border-start-start-radius: 100px;}
+#kittycat {border-style: dotted;} 

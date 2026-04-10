@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's That Pokemon?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-area">
+            <h1>Who's That Pokemon?</h1>
+            <div class="score">Score: <span id="score">0</span></div>
+
+            <div class="pokemon-display">
+                <div class="pokemon-image silhouette" id="pokemonImage">❓
+</div>
+                <p id="pokemonHint"></p>
+            </div>
+
+            <div class="choices-area" id="choicesArea"></div>
+        </div>
+
+        <div class="reference-bank">
+            <h2>Pokemon Reference</h2>
+            <div class="pokemon-list" id="pokemonList"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modalContent">
+            <h2 id="modalTitle"></h2>
+            <p id="modalText"></p>
+            <button onclick="handleModalClose()">Continue</button>
+        </div>
+    </div>
+<audio id="lowhpSound" src="sounds/lowhp.mp3"></audio>
+
+<div class="score">
+    Score: <span id="score">0</span>
+</div>
+
+<div class="timer">
+    Time Left: <span id="timer">12</span>s
+</div>
+<audio id="correctSound" src="sounds/correct.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
