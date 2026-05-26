@@ -1,13 +1,34 @@
 p {color: red;}
 p {background: orange;}
-p {height: 7vh}
-p {padding-top: 30}
+p {height: 5vh}
+p {padding-top: 20}
 p {padding-left: 20}
+p {padding-bottom: 20}
 p {width: 50vh} 
-li {color: green;} 
+p {font-weight: bold;}
 
-#kittycat {border: 8px dashed black}
-#kittycat {height: 60vh}
-#kittycat {border-radius: 100vh;}
-#kittycat {border-start-start-radius: 100px;}
-#kittycat {border-style: dotted;} 
+
+li {color: green;} 
+li {border: 6px dashed black}
+li {border-style: dotted}
+
+#kittycat-big {border: 8px dashed black}
+#kittycat-big {height: 60vh}
+#kittycat-big {border-radius: 100vh;}
+#kittycat-big {border-start-start-radius: 100px;}
+#kittycat-big {border-style: dotted;} 
+
+#kittycat-medium {border: 8px dashed black}
+#kittycat-medium {height: 45vh}
+#kittycat-medium {border-radius: 100vh;}
+#kittycat-medium {border-start-start-radius: 100px;}
+#kittycat-medium {border-style: dotted;} 
+
+#kittycat-small {border: 8px dashed black}
+#kittycat-small {height: 30vh}
+#kittycat-small {border-radius: 100vh;}
+#kittycat-small {border-start-start-radius: 100px;}
+#kittycat-small {border-style: dotted;} 
+span {background-color: orange;}
+.highlight_01 {background: #aef39a}
+.highlight_02 {background: purple}
