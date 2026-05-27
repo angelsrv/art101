@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;   
+    height: 100vh;  
+    object-fit: cover; 
+    z-index: -100;
+}
+
+/* to have a uniform format for my text*/
+.content {
+    position: relative;
+    z-index: 1; 
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+    justify-content: center;
+}
+
+/* TEXT FLEXBOX */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    margin: auto;
+
+    padding: 25px 40px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+
+    color: white;
+    text-align: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* Images */
+img {
+    height: 200px;
+    border-radius: 10px;
+}
+
+#hp5 {height: 200px;}
+
+#trix {height: 200px}
+
+
+
+/* IMAGE FLEXBOX */
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    width: fit-content;
+    margin: 60px auto 30px auto;
+
+    padding: 30px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.top img {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.top img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Style the output box to match the other containers */
+#environment-output {
+    display: none; /* Hidden by default until an image is clicked */
+    width: fit-content;
+    margin: 30px auto;
+    padding: 25px 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+/* JavaScript will add this class to make the box visible */
+#environment-output.show {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
