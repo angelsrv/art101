@@ -89,7 +89,7 @@ img {
 
 /* Style the output box to match the other containers */
 #environment-output {
-    display: none; /* Hidden by default until an image is clicked */
+    display: none; /* allows box to remain hidden until image is clicked on*/
     width: fit-content;
     margin: 30px auto;
     padding: 25px 40px;
@@ -102,9 +102,45 @@ img {
     max-width: 600px;
 }
 
-/* JavaScript will add this class to make the box visible */
+/* js will make this box visible */
 #environment-output.show {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+/* --- IMAGE FINDER STYLES --- */
+.finder-section {
+    text-align: center;
+    margin: 40px auto;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#image-finder-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#image-finder-btn:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+/* Make the result image larger than the 200px top icons */
+#image-result img {
+    height: 400px; /* Twice as large as your top icons */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
