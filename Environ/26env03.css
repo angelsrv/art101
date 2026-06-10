@@ -14,34 +14,19 @@ body {
     z-index: -100;
 }
 
-/* to have a uniform format for my text*/
-.content {
-    position: relative;
-    z-index: 1; 
-    color: white;
-    text-align: center;
-    padding-top: 5%;
-    justify-content: center;
-}
-
 /* TEXT FLEXBOX */
 .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     width: fit-content;
     margin: auto;
-
     padding: 25px 40px;
-
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-
     color: white;
     text-align: center;
-
     position: relative;
     z-index: 1;
 }
@@ -52,11 +37,8 @@ img {
     border-radius: 10px;
 }
 
-#hp5 {height: 200px;}
-
-#trix {height: 200px}
-
-
+#hp5 { height: 200px; }
+#trix { height: 200px; }
 
 /* IMAGE FLEXBOX */
 .top {
@@ -64,15 +46,11 @@ img {
     justify-content: center;
     align-items: center;
     gap: 30px;
-
     width: fit-content;
     margin: 60px auto 30px auto;
-
     padding: 30px;
-
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-
     position: relative;
     z-index: 1;
 }
@@ -89,7 +67,7 @@ img {
 
 /* Style the output box to match the other containers */
 #environment-output {
-    display: none; /* allows box to remain hidden until image is clicked on*/
+    display: none; 
     width: fit-content;
     margin: 30px auto;
     padding: 25px 40px;
@@ -102,7 +80,6 @@ img {
     max-width: 600px;
 }
 
-/* js will make this box visible */
 #environment-output.show {
     display: flex;
     flex-direction: column;
@@ -138,9 +115,46 @@ img {
     transform: scale(1.05);
 }
 
-/* Make the result image larger than the 200px top icons */
 #image-result img {
-    height: 400px; /* Twice as large as your top icons */
+    height: 400px; 
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* --- NEW WRAPPER AND BUBBLE STYLES --- */
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.quote-bubble {
+    display: none; 
+    position: absolute;
+    top: 110%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px 15px;
+    width: max-content;
+    max-width: 180px;
+    z-index: 10;
+    pointer-events: none; 
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.quote-bubble::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
 }

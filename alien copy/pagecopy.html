@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAKAKA'S PROJECT</title>
+  <link rel="stylesheet" href="pagecopy.css">
+<!-- Background music -->
+  <audio id="Song" src="music/Miranda167DraftFINAL.wav" loop="true" hidden="true" autostart="false">
+  <p>If you are reading this, it is because your browser does not support the audio element.</p>
+  </audio>
+<!-- Background image -->
+  <style>
+  body {
+  background-image: url('background_img.png');
+  }
+  </style>
+
+
+</head>
+
+<!-- Play button for the background music -->
+<button id="playBtn" onclick="toggleMusic()" class="playBtn">▶ Play Music</button>
+  <script>
+  const song = document.getElementById("Song");
+  const btn = document.getElementById("playBtn");
+
+  function toggleMusic() {
+    if (song.paused) {
+      song.play();
+      btn.textContent = "⏸ Pause Music"; 
+    } else {
+      song.pause();
+      btn.textContent = "▶ Play Music";   
+    }
+  }
+  </script>
+
+<body>
+  <main class="title-page">
+    <header>
+
+      <h1>Build Your own Alien!!</h1>
+
+    </header>
+
+    <section class="intro-copy" id="intro-panel">
+
+      <h2>Lore!</h2>
+      <p>Click the Start Building button to enter build mode. Then flip through body, head, and feature options to design a silly alien creature. add some more lore here: where do the aliens come from?</p>
+    </section>
+    <div>
+    <section class="builder-panel hidden" id="builder-panel">
+      <div class="preview-card">
+        <div class="preview-title">Alien Workbench</div>
+        <div class="alien-stage">
+          <div id="alien-body" class="alien-part alien-body body-0">
+            <img id="alien-body-img" src="placeholder.jpg" alt="Body option" />
+          </div>
+          <div id="alien-head" class="alien-part alien-head head-0">
+            <img id="alien-head-img" src="placeholder.jpg" alt="Head option" />
+          </div>
+          <div id="alien-features" class="alien-part alien-features features-0">
+            <img id="alien-features-img" src="placeholder.jpg" alt="Features option" />
+          </div>
+        </div>
+<!-- these are the buttons to control the alien's appearance -->
+        <div class="preview-tags">
+          <span class="tag">Body: <strong id="body-label">Body1</strong></span>
+          <span class="tag">Head: <strong id="head-label">Head1</strong></span>
+          <span class="tag">Features: <strong id="features-label">Features1</strong></span>
+        </div>
+      </div>
+        <!-- the updated code for byuttons, scale, and arrows to move images-->
+        <div class="controls-grid">
+          <!-- body section, also code section for the accordion style boxes that come down
+          and show button layout -->
+          <div class="control-card">
+            <h3 class="panel-trigger">Body</h3>
+            <div class="panel-content">
+              <div class="control-row">
+                <button class="flip-button" data-part="body" data-direction="-1">◀</button>
+                <span>Swap</span>
+                <button class="flip-button" data-part="body" data-direction="1">▶</button>
+              </div>
+              <div class="d-pad">
+                <button class="move-btn" data-part="body" data-axis="y" data-amount="-10">↑</button>
+                <div class="d-pad-middle">
+                  <button class="move-btn" data-part="body" data-axis="x" data-amount="-10">←</button>
+                  <button class="move-btn" data-part="body" data-axis="x" data-amount="10">→</button>
+                </div>
+                <button class="move-btn" data-part="body" data-axis="y" data-amount="10">↓</button>
+              </div>
+              <div class="scale-control">
+                <label>Scale</label>
+                <input type="range" class="scale-slider" data-part="body" min="10" max="100" value="50">
+              </div>
+            </div>
+          </div>
+          <!-- head section, also code section for the accordion style boxes that come down
+          and show button layout -->
+          <div class="control-card">
+            <h3 class="panel-trigger">Head</h3>
+            <div class="panel-content">
+              <div class="control-row">
+                <button class="flip-button" data-part="head" data-direction="-1">◀</button>
+                <span>Swap</span>
+                <button class="flip-button" data-part="head" data-direction="1">▶</button>
+              </div>
+              <div class="d-pad">
+                <button class="move-btn" data-part="head" data-axis="y" data-amount="-10">↑</button>
+                <div class="d-pad-middle">
+                  <button class="move-btn" data-part="head" data-axis="x" data-amount="-10">←</button>
+                  <button class="move-btn" data-part="head" data-axis="x" data-amount="10">→</button>
+                </div>
+                <button class="move-btn" data-part="head" data-axis="y" data-amount="10">↓</button>
+              </div>
+              <div class="scale-control">
+                <label>Scale</label>
+                <input type="range" class="scale-slider" data-part="head" min="10" max="100" value="50">
+              </div>
+            </div>
+          </div>
+<!-- Features   section, also code section for the accordion style boxes that come down
+          and show button layout -->
+          <div class="control-card">
+            <h3 class="panel-trigger">Features</h3>
+            <div class="panel-content">
+              <div class="control-row">
+                <button class="flip-button" data-part="features" data-direction="-1">◀</button>
+                <span>Swap</span>
+                <button class="flip-button" data-part="features" data-direction="1">▶</button>
+              </div>
+              <div class="d-pad">
+                <button class="move-btn" data-part="features" data-axis="y" data-amount="-10">↑</button>
+                <div class="d-pad-middle">
+                  <button class="move-btn" data-part="features" data-axis="x" data-amount="-10">←</button>
+                  <button class="move-btn" data-part="features" data-axis="x" data-amount="10">→</button>
+                </div>
+                <button class="move-btn" data-part="features" data-axis="y" data-amount="10">↓</button>
+              </div>
+              <div class="scale-control">
+                <label>Scale</label>
+                <input type="range" class="scale-slider" data-part="features" min="10" max="100" value="50">
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+<!-- these are the start and gallery buttons at the bottom of the page -->
+    <footer>
+      <button id="start-button">Start Building</button>
+      <button id="start-button">Gallery</button>
+
+    </footer>
+  </main>
+
+  <script src="pagecopy.js"></script>
+</body>
+</html>

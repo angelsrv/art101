@@ -1,0 +1,318 @@
+/* sorry if some things arent connected to anything, i find it hard to keep track of my css! 
+Feel free to change anything you like! */
+#playBtn {
+  background: rgba(0, 0, 0, 0.35);
+  font-family: "Courier New", Courier, monospace;
+  justify-self: right;
+  /* Added styling to make it look like a button, since it was floating */
+  color: #efffff;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.85rem 1.5rem;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #e8f9ff;
+  background :rgba(1, 0, 4, 0.893);
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.02em;
+  overflow-x: hidden;
+}
+
+#start-button {
+  background: rgba(0, 0, 0, 0.35);
+  font-family: "Courier New", Courier, monospace;
+}
+
+:root {
+  --accent: #7bff8a;
+  --accent-2: #f6ff53;
+  --panel: rgba(6, 12, 34, 0.82);
+  --border: #68ffd7;
+  --shadow: 0 0 28px rgba(123, 255, 138, 0.22);
+  --text-soft: #c9f5ff;
+  --terminal: #96ff9c;
+  --button-bg: rgba(2, 10, 25, 0.7);
+  --button-hover: rgba(123, 255, 138, 0.18);
+}
+
+header {
+  padding: 2rem 3rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  border-bottom: 2px dashed var(--accent);
+  box-shadow: inset 0 -2px 0 rgba(255,255,255,0.12);
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-shadow: 0 0 18px rgba(138, 255, 138, 0.8);
+}
+
+header p {
+  margin: 0.75rem auto 0;
+  max-width: 740px;
+  color: #d5f7ff;
+  font-size: 1.05rem;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 3rem 4rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.85rem 1.4rem;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #efffff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+nav a:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: rgba(138, 255, 138, 0.15);
+}
+
+section.card {
+  background: var(--panel);
+  border: 1px solid rgba(138,255,138,0.4);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+section.card h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  letter-spacing: 0.12em;
+  color: #eff;
+}
+
+section.card p {
+  line-height: 1.75;
+  color: #dbeeff;
+}
+
+section.card ul {
+  padding-left: 1.3rem;
+}
+
+section.card li {
+  margin: 0.75rem 0;
+}
+
+button,
+.input-ghost {
+  background: rgba(0, 0, 0, 0.35);
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  color: #efffff;
+  padding: 0.85rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(138, 255, 138, 0.12);
+}
+
+button:hover,
+.input-ghost:hover {
+  background: rgba(138, 255, 138, 0.18);
+}
+
+footer {
+  padding: 1.5rem 3rem 2rem;
+  text-align: center;
+  color: #a9f8f8;
+  font-size: 0.95rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.builder-panel {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.preview-card {
+  background: rgba(4, 9, 24, 0.88);
+  border: 1px solid rgba(123, 255, 138, 0.22);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 30px rgba(123, 255, 138, 0.14);
+}
+
+.preview-title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: #d9ffbc;
+  margin-bottom: 1rem;
+}
+
+.alien-stage {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px dashed rgba(123, 255, 138, 0.26);
+}
+
+.alien-stage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Ensure the alien parts can overlap and move smoothly */
+.alien-part {
+  position: absolute;
+  transition: transform 0.1s ease;
+}
+
+.preview-tags {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  color: #cceeff;
+}
+
+.tag {
+  background: rgba(13, 22, 45, 0.9);
+  border: 1px solid rgba(123, 255, 138, 0.16);
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  font-size: 0.92rem;
+}
+
+.controls-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 300px;
+}
+
+.control-card {
+  background: rgba(7, 13, 30, 0.92);
+  border: 1px solid rgba(123, 255, 138, 0.2);
+  border-radius: 1.25rem;
+  padding: 1rem;
+}
+
+.control-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flip-button {
+  min-width: 3rem;
+  background: var(--button-bg);
+  border: 2px solid var(--accent);
+  color: #f7ffef;
+  border-radius: 0.85rem;
+  font-size: 0.95rem;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.flip-button:hover {
+  transform: translateY(-2px);
+  background: var(--button-hover);
+}
+
+.log-line {
+  letter-spacing: 0.06em;
+}
+
+/* --- MAKAKA'S NEW UPGRADES (Accordion, D-pad, Scaling) --- */
+
+.panel-trigger {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s, background 0.2s;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+
+.panel-trigger:hover {
+  color: var(--accent);
+  background: rgba(123, 255, 138, 0.1);
+}
+
+.panel-content {
+  display: none;
+  margin-top: 1.5rem;
+}
+
+.control-card.active .panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.d-pad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.d-pad-middle {
+  display: flex;
+  gap: 1.5rem; 
+}
+
+.move-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: var(--button-bg);
+}
+
+.scale-control {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.scale-control label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-soft);
+}
+
+.scale-slider {
+  width: 100%;
+  cursor: pointer;
+}
